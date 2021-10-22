@@ -1,10 +1,10 @@
 <?php
     if (!empty($_GET)){
-        foreach ($_GET as $key => $value){
-            echo '<pre>';
-            print_r($key.' - '.$value);
-            echo '</pre>';
-        }
+//        foreach ($_GET as $key => $value){
+//            echo '<pre>';
+//            print_r($key.' - '.$value);
+//            echo '</pre>';
+//        }
     }
 ?>
 
@@ -51,6 +51,15 @@
 
 
 </form>
-  
+
+<table border="1" solid="" cellpadding="5">
+    <?php
+    foreach ($_GET as $key => $value){?>
+    <tr>
+            <th><?php echo $key ?>></th>
+            <td><?php echo $value ?></td>
+
+    </tr>
+    <?php }?>
 </body>
 </html>
